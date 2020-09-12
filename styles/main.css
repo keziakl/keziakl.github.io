@@ -29,7 +29,7 @@ nav{
 .nav-links a{
   color:white;
   text-decoration:none;
-  font-size:18px;
+  font-size:3vh;
 }
 .nav-item-home a{
   color:#00d8d8;
@@ -41,8 +41,11 @@ nav{
   display:none;
 }
 .burger div{
-  width:25px;
-  height:3px;
+  /*
+  original:25px and 3px
+  */
+  width:5vw; 
+  height:0.6vh;
   background-color:white;
   margin:5px;
   transition: all 0.3s ease;
@@ -102,7 +105,7 @@ nav{
 .banner{
   position: relative;
   z-index: -1; /*who knows*/
-  margin-top:50px;
+  margin-top:10px;
 }
 .banner img{
   max-width: 100%;
@@ -114,10 +117,11 @@ nav{
 .banner .slogan{
   position: absolute;
   left: 6%;
-  top: 26%;
+  top: 23%;
   color: white;
   font-family: "Futura";
-  font-size: 3.7vw;
+  /*original: 4vw*/
+  font-size: 50px;
   letter-spacing:0.03em;
 }
 .banner .welcome{
