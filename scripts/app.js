@@ -1,27 +1,24 @@
-const CHART = document.getElementById("lineChart");
-console.log(CHART);
-let lineChart = new Chart(CHART, {
-    type: 'line'
-    data: {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [
-        {
-            label: "My First dataset",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75, 192, 192, 0.4)",
-            borderColor: "rgba(75, 192, 192, 1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75,192,192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHitRadius: 10,
-            data: [65, 59, 80, 81, 56, 55, 40],
-        }
-    ]}
-})
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
 
+    burger.addEventListener('click', () => {
+        //toggle nav
+        nav.classList.toggle('nav-active');
+
+        //animate links with delay
+        navLinks.forEach((link, index) => {
+            if (link.style.animation){
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + .6}s`
+            }
+        });
+        //animate burger
+        burger.classList.toggle('toggle'); 
+    });
+
+    
+}
+navSlide();
