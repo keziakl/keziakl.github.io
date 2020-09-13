@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>current pastimes.</title>
-    </head>
-    
-    <body>
-        <h1>this is what i'm doing right now!</h1>
-        <h2>well, maybe not literally.</h2>
-    </body>
-</html>
+<style>
+</style>
+
+<canvas id="canvas" class="canvas" width="1500" height="1000" >
+</canvas>
+
+<script>
+
+    let hearts = []
+    function init() {
+        window.requestAnimationFrame(draw);
+        for (let i = 0 ; i < 100 ; i ++){
+            hearts.push(new Heart())
+        }
+        ctx.fillStyle = "#FF0000"
+    }
+
+    class Heart {
+        constructor() {
+            this.x = Math.random()*1500;
+            this.y = Math.random()*500;
+            this.vx = getRandomArbitrary(-10, 10);
+            this.vy = getRandomArbitrary(-100, 0);
+            this.ay = 1;
+        }
+
+        update() {
+            this.x += this.vx
+            this.y += this.vy
+            this.vy += this.ay
+        }
+
+        draw(canvas){
+            canvas.fillStyle = "#ff0000"
+            canvas.beginPath();
+            canvas.moveTo(this.x, this.y);
+            canvas.lineTo(this.x+10, this.y-10);
+            canvas.lineTo(this.x+15, this.y);
+            canvas.lineTo(this.x, this.y+15);
+            canvas.lineTo(this.x-15, this.y);
+            canvas.lineTo(this.x-10, this.y-10);
+            canvas.fill();
+
+        }
+    }
+
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+
+    function draw() {
+        let ctx = document.getElementById('canvas').getContext('2d');
+
+        ctx.globalCompositeOperation = 'destination-over';
+
+        ctx.clearRect(0, 0, 1500, 1000); // clear canvas
+
+        ctx.font = "30px Arial";
+        ctx.fillText("Taquero mensa", 500, 500);
+
+        for (let i = 0 ; i < hearts.length ; i ++){
+            let heart = hearts[i];
+
+            heart.draw(ctx)
+            heart.update()
+            if (heart.y > 1000){
+                hearts[i] = new Heart()
+            }
+        }
+
+        window.requestAnimationFrame(draw);
+    }
+
+    init();
+</script>
 
