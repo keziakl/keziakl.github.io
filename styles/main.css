@@ -5,6 +5,7 @@ html{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  color:white;
 }
 nav{
   background-color: black;
@@ -51,7 +52,7 @@ nav{
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1100px){
   body{
     overflow-x:hidden;
   }
@@ -70,6 +71,7 @@ nav{
   }
   .nav-links li{
     opacity: 0;
+    height:70%;
   }
   .burger{
     display:block;
@@ -106,6 +108,7 @@ nav{
   position: relative;
   z-index: -1; /*who knows*/
   margin-top:10px;
+  margin-bottom: 100vh;
 }
 .banner img{
   max-width: 100%;
