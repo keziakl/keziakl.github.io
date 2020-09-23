@@ -1,14 +1,18 @@
 html{
-  background-color: black;
+  background-color:white;
 }
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  color:white;
+  /*overflow-x: hidden;*/
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
 nav{
-  background-color: black;
+  background-color: #1abc9c;
   display:flex;
   position:fixed;
   top:0;
@@ -33,10 +37,11 @@ nav{
   font-size:3vh;
 }
 .nav-item-home a{
-  color:#00d8d8;
+  color:#29f8ff;
 }
 .nav-item-about a{
-  color:#1de4ad;
+  color:#26ffb7
+  /*color:#1de4ad;*/
 }
 .burger{
   display:none;
@@ -62,7 +67,7 @@ nav{
     right:0px;
     height:92vh;
     top:8vh;
-    background-color:black;
+    background-color:#1abc9c;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -108,7 +113,9 @@ nav{
   position: relative;
   z-index: -1; /*who knows*/
   margin-top:10px;
-  margin-bottom: 100vh;
+  /*margin-bottom: 100vh;*/
+  margin-bottom: 0px;
+  background-color: black;
 }
 .banner img{
   max-width: 100%;
@@ -116,6 +123,7 @@ nav{
   object-fit:cover;
   overflow:hidden;
   margin:0;
+  display:block;
 }
 .banner .slogan{
   position: absolute;
@@ -141,27 +149,59 @@ nav{
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 .wrapper img{
   width: 200vw;
   margin: 40px;
 }
-main{
-  max-width: 100%;
-  width: 1200px;
-  margin: 50px auto;
-  padding: 0 40px;
-  box-sizing: border-box;
-  font-family: "Futura";
-}
-article h2{
-  color: white;
-}
-article p{
-  font-size: 0.8em;
-  color: #bac7d4;
-}
 
+.color-banner{
+  margin-top:58px;
+  padding-top: 60px;
+  padding-bottom:80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 50px;
+  font-family:Futura;
+}
+.color-banner h2{
+  font-size:35px;
+}
+.intro-img-1{
+  margin:5%;
+}
+.intro-img-1 img{
+  float: left;
+  width: 33.33%;
+  padding: 5%;
+}
+.left-intro {
+  padding-top:5%;
+  padding-left:20%;
+  padding-right:20%;
+  padding-bottom:10%;
+}
+.blank{
+  font-size:20px;
+  color:white;
+  text-align: center;
+  color: white;
+  font-family:Futura;
+}
+.left-intro h3{
+  font-family: "Futura";
+  font-size:50px;
+  font-style:bold;
+  color: #1abc9c;
+}
+.left-intro p{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size:20px;
+  color:black;
+}
+.under-construct{
+  margin:150px;
+  font-family:Futura;
+  color: #1abc9c;
+}
