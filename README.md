@@ -4,7 +4,7 @@ Please make a pull request if you'd like to request a change or an addition.
 
 # Remembering how to push changes and serve this bad boy
 - run npm run build
-- copy all of the build files into the root repository
+- copy all of the build files (inner files) into the root repository
 - push all of that to github
 
 ## Available Scripts
