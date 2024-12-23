@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "slug": "first-article",
+      "title": "Benchmarks, statistics, and an early merry christmas",
+      "date": "2024-12-23",
+      "preview": "Merry early Christmas! I'm feeling pretty festive this year, not too sure why. I'm making my first ever blog post to celebrate.",
+      "content": "This is the content of my first blog post."
+    },
+    {
+      "id": 2,
+      "slug": "second-article",
+      "title": "Studying in the holidays: the works",
+      "date": "2024-12-24",
+      "preview": "I found the best cafe in Dallas to work in (read: I've tried like 2 cafes, and this one is pretty empty probably because of the holidays.",
+      "content": "Here is some more blog content!"
+    }
+  ]
