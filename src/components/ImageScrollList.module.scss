@@ -1,0 +1,21 @@
+.images {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: #1abc9c3c;
+    border-radius: 8px;
+    @media (min-width: 768px) {
+        justify-content: center;
+        background-color: #fff;
+    }
+}
+
+.image {
+    display: inline-block;
+    height: 200px;
+    padding: 30px;
+    @media (min-width: 768px) {
+        height: 300px;
+    }
+}
