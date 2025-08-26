@@ -14,7 +14,7 @@ const AboutMeContent = () => (
     <ImageScrollList images={[donut1, donut2, donut3]} />
     <div className={styles.spacing}>
         <p>
-            I'm currently based in NYC. I am from Texas, went to school at Stanford University in California, and did an exchange at the Chinese Universty of Hong Kong.
+            I'm currently based in NYC. I am from Texas, went to school at Stanford University in California, and did an exchange at the Chinese University of Hong Kong.
         </p>
         <p>
             You can find me across the globe usually.
